@@ -1,0 +1,36 @@
+<%- include("menu.ejs") %>
+
+<div class="container">
+    <h1>show users</h1>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Place</th>
+            <th>Id</th>
+            <th>IMG</th>
+        </tr>
+        <% data.forEach(function(values) { %>
+               <tr>
+                <td>
+                    <%= values.name%>
+                </td>
+                <td>
+                    <%= values.age%>
+                </td>
+                <td>
+                    <%= values.userplace%>
+                </td>
+                <td>
+                    <%= values.id%>
+                </td>
+                <td>
+                    <img src="/xyz/<%= values.userfile%>" height="90" width="90" alt="">
+                </td>
+               </tr>
+      <%  }); %>
+    </table>
+</div>
+
+
